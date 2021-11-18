@@ -1,0 +1,533 @@
+<style>
+
+/* 레이아웃*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.clearfix::before {}
+
+,
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+#wrap {
+    width: 1440px;
+    height: px;
+    background: rgb(200, 120, 210);
+    margin: 0 auto;
+    position: relative;;
+}
+
+/*배너*/
+#banner {
+    width: 1440px;
+    height: 350px;
+    background: #fff;
+}
+
+#banner>div {
+    float: left;
+    height: 350px;
+}
+
+#banner .ban1 {
+    width: 572px;
+    background-color: rgb(243, 238, 232);
+}
+
+#banner .ban2 {
+    width: 868px;
+    background-color: rgb(92, 81, 67);
+}
+
+/*header*/
+#header {
+    width: 1440px;
+    height: 100px;
+    background: rgba(150, 100, 160, 0.65);
+}
+
+#header .logo {
+    float: left;
+    width: 220px;
+    background: #999
+}
+
+#header .nav {
+    float: left;
+    width: 972px;
+    padding: 8px;
+}
+
+/*menu*/
+#menu {
+    font: bold 20px "malgun gothic";
+    width: 700px;
+    height: 50px;
+    color: rgb(248, 247, 247);
+    line-height: 50px;
+    position : absolute;
+    right : 50px;
+    top : 13px;
+    text-align: center;
+}
+
+#menu>ul>li {
+    float: left;
+    width: 160px;
+    position: relative;
+    z-index: 3;
+}
+
+#menu>ul>li>ul {
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    display: none;
+    float: center;
+    font-size: 14px;
+    background: rgb(246, 248, 248);
+}
+
+#menu>ul>li:hover>ul {
+    display: block;
+}
+
+#menu>ul>li>ul>li:hover {
+    background: rgb(213, 187, 221);
+    transition: ease 1s;
+}
+
+
+
+/*content*/
+#contents {
+    width: 1440px;
+    height: 300px;
+    background: rgb(145, 116, 170);
+    position: relative;
+    clear: both;
+}
+
+#contents>div {
+    float: left;
+    position: relative;
+}
+
+#contents>div .cont1 {
+    background: #555;
+}
+
+#contents>div .cont2 {
+    background: #fff;
+}
+
+#contents>div .con2 h4 {
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(194, 166, 129);
+}
+
+#contents>.con2 .box1 {
+    width: 150px;
+    float: left;
+    width: 175px;
+}
+
+#contetns>div .categori {
+    list-style: none;
+    align-items: left;
+    justify-content: center;
+    float: left;
+    position: relative;
+}
+
+.categori a {
+    text-decoration: none;
+    color: rgb(126, 195, 195);
+}
+
+.categori li {
+    margin: 0 3px;
+}
+
+.categori a i {
+    font-size: 1.2rem;
+}
+
+.catefori a:hover i {
+    color: rgb(120, 120, 200);
+}
+
+#board {
+    width: 1440px;
+    height: auto;
+    background: rgb(145, 116, 170);
+}
+
+#table {
+    float: left;
+    width: auto;
+    height: auto;
+    clear: both;
+    padding: 1%;
+    ;
+}
+
+table.table2 {
+    border-spacing: 1px;
+    text-align: auto;
+    float: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin: 10px;
+}
+
+table.table2 tr {
+    width: 50px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+table.table2 td {
+    width: 100px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.board_list_wrap {
+    padding: 10px;
+}
+
+.board_list {
+    width: 90%;
+    border-top: 2px solid rgb(17, 17, 17);
+    margin: 0 auto;
+}
+
+.board_list tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.board_list th,
+.board_list td {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.board_list td {
+    text-align: center;
+}
+
+.board_list .tit {
+    text-align: left;
+}
+
+.board_list .tit:hover {
+    text-decoration: underline;
+}
+
+.board_list_wrap .paging {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0;
+}
+
+.board_list_wrap .paging a {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 100px;
+    font-size: 12px;
+}
+
+.board_list_wrap .paging a:first-child {
+    margin-left: 0;
+}
+
+.board_list_wrap .paging a.bt {
+    border: 1px solid #eee;
+    background: #eee;
+}
+
+.board_list_wrap .paging a.num {
+    border: 1px solid rgb(175, 100, 216);
+    font-weight: 600;
+    color: rgb(175, 100, 216);
+}
+
+.board_list_wrap .paging a.num.on {
+    background: rgb(171, 76, 180);
+    color: #fff;
+}
+
+/*게시판*/
+
+/*footer*/
+#footer {
+    float: left;
+    width: 1440px;
+    height: 100px;
+    ;
+    background-color: rgb(12, 12, 12)
+}
+
+#footer>div {
+    float: left;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+#footer .foot1 {
+    width: 550px;
+    text-align: center;
+}
+.foot1 h3 {
+    font: bold 40px "malgun gothic" ;
+    position : relative ;
+    bottom : 50px ;
+}
+
+.foot1 ul {
+    position : absolute;
+    bottom : -105px ;
+}
+
+#footer .foot2 {
+    width: 660px;
+    ;
+    color: rgb(155, 155, 155);
+}
+
+#footer .foot3 {
+    width: 230px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.socials a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.socials li {
+    margin: 0 8px;
+
+}
+
+.socials a i {
+    font-size: 1.2rem;
+
+}
+
+.socials a:hover i {
+    color: rgb(120, 120, 200);
+}
+
+
+/*style code*/
+.logo_img {
+    position: relative;
+  }
+
+.topleft {
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    font-size: 18px;
+  }
+  
+nav {
+    width: 100%;
+    height: 23px;
+    margin-right: 10%;
+    color: white;
+    position: relative;
+    left: 280px;
+    top: 77px;
+}
+
+nav a {
+    background-color: rgb(175, 106, 184);
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 0px;
+}
+
+ul li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:#333;
+}
+
+#lefti {
+    position: fixed;
+    left: 30px;
+    top: 200px;
+    bottom: 0;
+    width: 200px;
+}
+
+#lefti ul {
+    background-color: black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#lefti ul li {
+    margin-left: 20px;
+    padding-top: 5px;
+    background-color: black;
+}
+
+#lefti ul li a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+#maini {
+    padding-left: 250px;
+    padding-top: 20px;
+    left: 250px;
+    top: 200px;
+    bottom: 0;
+    width: 60%;
+    height: 500px;
+}
+
+#maini>div .board1 {
+    width: 500px;
+    border: 1px solid;
+    height: 230px;
+    background: #fff;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.slider {
+    width: 868px;
+    height: 480px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider input[type=radio] {
+    display: none;
+}
+
+ul.imgs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.imgs li {
+    position: absolute;
+    left: 640px;
+    transition-delay: 1s;
+
+    padding: 0;
+    margin: 0;
+}
+
+.bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 2;
+}
+
+.bullets label {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1) {
+    background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2) {
+    background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3) {
+    background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4) {
+    background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1) {
+    left: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2) {
+    left: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3) {
+    left: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4) {
+    left: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 50px;
+    right:0px;
+  }
+  
+</style>
